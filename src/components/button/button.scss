@@ -1,0 +1,33 @@
+@import '../../variables';
+
+.button {
+  font-family: $font-button;
+  font-weight: $font-weight-default;
+  font-size: medium;
+  display: inline;
+  cursor: pointer;
+  width: 100%;
+  height: 2.5rem;
+  color: $button-color-font;
+  transition: 0.8s;
+  &:hover {
+    box-shadow: $shadow;
+    transition: 0.3s;
+  }
+  &--transparent {
+    background-color: transparent;
+    border: 0.15rem solid $button-color;
+    &:hover {
+      border-color:  $border-focus-color;
+      transition: 0.3s;
+    }
+  }
+  &--solid {
+    background-color: $button-color;
+    color: $font-bright;
+    border: none;
+    &:hover {
+      background-color: $button-background-transition-color;
+    }
+  }
+}

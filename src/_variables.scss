@@ -1,0 +1,67 @@
+/// VARIABLES
+$font-poppins: 'Poppins', sans-serif;
+$font-source-sans: 'Source Sans Pro', sans-serif;;
+
+$font-button: $font-poppins;
+$font-weight-default: 1.25rem;
+$font-family-text: $font-poppins;
+$font-input: $font-poppins;
+$font-light: 100;
+$font-regular: 400;
+$font-title: 3rem;
+
+// BASE COLORS
+$alabaster: #fafafc;
+$white-lilac: #faf9fc;
+$envy: #87a487;
+$cabbage-pont: #3a503c;
+$shilo: #ecb2a9;
+$watusi: #ffdfd4;
+
+// NAMED COLORS
+$background-menu-color: $alabaster;
+$border-bright-color: $envy;
+$border-color: $envy;
+$border-focus-color: $shilo;
+$button-background-transition-color: $envy;
+$button-color: $cabbage-pont;
+$button-color-font: $cabbage-pont;
+$button-transition-color: $shilo;
+$checkbox-active-color: $cabbage-pont;
+$checkbox-background-color: $watusi;
+$checkbox-border-color: $cabbage-pont;
+$checkbox-check-color: $alabaster;
+$checkbox-hover-color: $envy;
+$font-deep-color: $cabbage-pont;
+$font-bright: $alabaster;
+$icon-separator-color: $cabbage-pont;
+$mask: #68686BBB;
+$radio-active-color: $cabbage-pont;
+$radio-border-color: $cabbage-pont;
+$radio-check-color: $alabaster;
+$radio-background-color: $watusi;
+$radio-hover-color: $envy;
+$select-selected-color: $watusi;
+$select-option-color: $envy;
+$shadow: 0.1rem 0.7rem 2rem -1rem $cabbage-pont;
+$title-deep-color: $cabbage-pont;
+$title-bright-color: $envy;
+
+/// FUNCTIONS
+@function calculateRem($size, $scale: 1) {
+	@return $size/16px * 1rem * $scale;
+}
+
+/// MIXINS
+@mixin background-color($color1: $white-lilac, $color2: $alabaster) {
+	background: linear-gradient(to bottom, $color1 0%, $color2 100%);
+}
+
+@mixin separator($url:'../../assets/icon3.svg') {
+  background: url($url) no-repeat;
+  background-size: contain;
+  height: 2.5rem;
+  width: 2.5rem;
+	padding-bottom: 1rem;
+  filter: invert(28%) sepia(4%) saturate(2378%) hue-rotate(75deg) brightness(96%) contrast(94%);
+}
