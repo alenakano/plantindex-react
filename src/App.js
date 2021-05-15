@@ -2,6 +2,7 @@ import React, {useEffect} from 'react';
 import Button from './components/button';
 import Radio from './components/radio';
 import Checkbox from './components/checkbox';
+import Input from './components/input';
 
 import './style.scss';
 
@@ -23,13 +24,23 @@ function App() {
           onCheckBoxClicked={getCheckboxValue}
         >
         </Checkbox>
+        <Input
+          placeholder='testettetete'
+          onValueInput={onValueInput}
+          maxLength='10'
+        >
+        </Input>
       </header>
     </div>
   );
 }
 
 function onChangeValue(event) {
-  console.log('CHAMOUUUUU', event.target.value)
+  console.log('CHAMOUUUUU', event.target.value);
+}
+
+function onValueInput(value) {
+  console.log(value);
 }
 
 function buttonTest() {
