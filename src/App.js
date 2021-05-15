@@ -1,8 +1,9 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import Button from './components/button';
 import Radio from './components/radio';
 import Checkbox from './components/checkbox';
 import Input from './components/input';
+import CardSearch from './components/cardSearch';
 
 import './style.scss';
 
@@ -30,6 +31,9 @@ function App() {
           maxLength='10'
         >
         </Input>
+        <CardSearch
+        >
+        </CardSearch>
       </header>
     </div>
   );
