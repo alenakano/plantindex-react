@@ -9,10 +9,11 @@ function Input({
 }) {
   return (
     <div className="input-search">
-      <object type="image/svg+xml" className="input-search__icon"></object>
+      <object aria-label="icon" type="image/svg+xml" className="input-search__icon"></object>
       <span className="input-search__icon"></span>
       <input 
-        className="input-search__field" 
+        className="input-search__field"
+        aria-label={placeholder}
         name={name} type="text" 
         placeholder={placeholder}
         maxLength = {maxLength}

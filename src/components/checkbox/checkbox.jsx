@@ -7,7 +7,7 @@ function Checkbox({
 }) {
   return (
     <label 
-      class="checkbox" 
+      className="checkbox" 
       onClick={(ev) => {
           if(ev.target.checked !== undefined) {
             const response = {
@@ -20,8 +20,8 @@ function Checkbox({
       }
     >
       {value}
-      <input type="checkbox" name={value} class="checkbox__input" />
-      <span class="checkbox__checkmark"></span>
+      <input type="checkbox" name={value} className="checkbox__input" />
+      <span className="checkbox__checkmark"></span>
     </label>
   );
 }
