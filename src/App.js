@@ -16,12 +16,7 @@ function App() {
       <br/>
       <Button transparent={true} onButtonClicked={buttonTest} />
       <br/>
-      <div onChange={onChangeValue} >
-        <Radio name = 'teste' value='opcao1' defaultCheck={true}>
-        </Radio>
-        <Radio name = 'teste' value='opcao2'>
-        </Radio>
-      </div>
+      <Radio onChangeValue={e => console.log(e)} />
       <br/>
       <Checkbox
         value="Olar"
@@ -47,10 +42,6 @@ function App() {
       </Select>
     </div>
   );
-}
-
-function onChangeValue(event) {
-  console.log('CHAMOUUUUU', event.target.value);
 }
 
 function onValueInput(value) {

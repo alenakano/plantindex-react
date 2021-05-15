@@ -2,23 +2,45 @@ import { React } from 'react';
 import './radio.scss';
 
 function Radio({
-  name = 'DefaultName',
-  value = 'DefaultValue',
-  defaultCheck = false
+  name = 'name',
+  options = [
+    {
+      value: 'value 01'
+    },
+    {
+      value: 'value02'
+    }
+  ],
+  onChangeValue = (e) => false
 }) {
   return (
-    <label className="radio">
-      {value}
-      <input
-        id={value}
-        type="radio"
-        value={value}
-        name={name}
-        defaultChecked={defaultCheck}
-        className="radio__input"
-      />
-      <span className="radio__checkmark"></span>
-    </label>
+    <div 
+      onChange= {(e) => {
+          // e.preventDefault();
+          const res = {
+            value: e.target.value,
+            id: e.target.id
+          }
+          onChangeValue(res);
+        }
+      }
+    >
+      {options.map((option, index) => {
+        return (
+          <label className="radio" key={index}>
+            {option.value}
+            <input
+              id={option.value}
+              value={index}
+              type="radio"
+              name={name}
+              className="radio__input"
+            />
+            <span className="radio__checkmark"></span>
+          </label>
+        );
+      })}
+    </div>
   );
 }
 
