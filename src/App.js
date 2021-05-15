@@ -1,6 +1,8 @@
 import React, {useEffect} from 'react';
 import Button from './components/button';
 import Radio from './components/radio';
+import Checkbox from './components/checkbox';
+
 import './style.scss';
 
 function App() {
@@ -10,19 +12,17 @@ function App() {
       <header className="App-header">
         <Button transparent={false} text="Lorem Ipsum" />
         <Button transparent={true} onButtonClicked={buttonTest} />
-        <form onSubmit={console.log()}>
         <div onChange={onChangeValue} >
           <Radio name = 'teste' value='opcao1' defaultCheck={true}>
           </Radio>
           <Radio name = 'teste' value='opcao2'>
           </Radio>
         </div>
-    
-        </form>
-        <Radio>
-        </Radio>
-        <Radio>
-        </Radio>
+        <Checkbox
+          value="Olar"
+          onCheckBoxClicked={getCheckboxValue}
+        >
+        </Checkbox>
       </header>
     </div>
   );
@@ -34,6 +34,10 @@ function onChangeValue(event) {
 
 function buttonTest() {
   console.log('ENTROU ->');
+}
+
+function getCheckboxValue(value) {
+  console.log('CHECKBOX', value)
 }
 
 export default App;
