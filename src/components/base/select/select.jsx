@@ -11,7 +11,7 @@ function Select({
     <>
     <div className="custom-select">
       <select className="custom-select__select" name="componente" id="componente" onChange={e => {console.log(e.target.value)}}>
-        <option className="select__option" key="0" value="0">Selectione uma opção</option>
+        <option className="select__option" key="0" value="0">Selecione uma opção</option>
           {
             options.map((option, index) => {
               return <option className="select__option" key={index+1} value={index+1}>{option}</option> 

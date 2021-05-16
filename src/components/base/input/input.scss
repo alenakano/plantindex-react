@@ -1,10 +1,10 @@
-@import '../../variables';
+@import '../../../variables';
 
 .input-search {
   position: relative;
   &__icon {
     position: absolute;
-    background: url('../../assets/search.svg') no-repeat;
+    background: url('../../../assets/search.svg') no-repeat;
     height: 1.5rem;
     width: 1.5rem;
     top: 0.5rem;

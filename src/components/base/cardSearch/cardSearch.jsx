@@ -1,5 +1,5 @@
 import React from 'react';
-import './cardSearch';
+import './cardSearch.scss';
 
 function CardSearch({
   imgPath = 'http://localhost:5000/morango.jpg',
@@ -12,16 +12,17 @@ function CardSearch({
     ornare. Integer pellentesque sit amet`
 }) {
   return (
-    <div className="search-card">
-      <div className="search-card__image-container">
-        <img src={`${imgPath}`} alt={alt} className="search-card__image"></img>
+    <section class="list-cards">
+      <div className="search-card">
+        <div className="search-card__image-container">
+          <img src={`${imgPath}`} alt={alt} className="search-card__image"></img>
+        </div>
+        <h1 className="search-card__title title--signature">{title}</h1>
+        <div className="search-card__text">
+          {formatText(desc)}
+        </div>
       </div>
-      <h1 className="search-card__title title--signature">{title}</h1>
-      <div className="search-card__text">
-        {formatText(desc)}
-      </div>
-    </div>
-  
+    </section>
   );
 
   function formatText(text) {
