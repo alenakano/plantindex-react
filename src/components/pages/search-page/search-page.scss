@@ -1,0 +1,25 @@
+@import '../../../variables';
+
+.form-search {
+  width: 80%;
+  padding-top: 2rem;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  &__input {
+    width: 40%;
+    display: inline-block;
+  }
+  &__select {
+    width: 30%;
+  }
+  &__button {
+    width: 20%;
+  }
+}
+
+.search-results {
+  width: 80%;
+  padding-top: 2rem;
+  margin: 0 auto;
+}
