@@ -1,11 +1,21 @@
 import React from 'react';
 import './header.scss';
 
-function Header() {
+function Header({
+  goToPage
+}) {
   return (
     <header className="header menu">
       <nav className="menu__block">
-        <p className="title--signature clickable">Plant<span className="title">Index</span></p>
+        <div 
+          onClick = {
+            (e) => {
+              e.preventDefault();
+              goToPage('main');
+            }
+          }>
+          <p className="title--signature clickable">Plant<span className="title">Index</span></p>
+        </div>
         <ul className="menu__list">
           <li className="menu__object">
             <object aria-label="icone-folha" alt="icone-folha" type="image/svg+xml" className="menu__object--icon1"></object>
@@ -17,7 +27,15 @@ function Header() {
           </li>
           <li className="menu__object">
             <object aria-label="icone-folha" alt="icone-folha"  type="image/svg+xml" className="menu__object--icon3"></object>
-            <p className="menu__text clickable">pesquise</p>
+            <p 
+              className="menu__text clickable" 
+              onClick={(e) => {
+                e.preventDefault();
+                goToPage('search');
+              }}
+            >
+              pesquise
+            </p>
           </li>
         </ul>
       </nav>
