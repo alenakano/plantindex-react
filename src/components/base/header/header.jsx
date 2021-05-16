@@ -8,7 +8,7 @@ function Header() {
         <p className="title--signature clickable">Plant<span className="title">Index</span></p>
         <ul className="menu__list">
           <li className="menu__object">
-            <object aria-label="icone-folha" alt="icone-folha" type="image/svg+xml" className="menu__object--icon2"></object>
+            <object aria-label="icone-folha" alt="icone-folha" type="image/svg+xml" className="menu__object--icon1"></object>
             <p className="menu__text clickable">sobre</p>
           </li>
           <li className="menu__object clickable">
