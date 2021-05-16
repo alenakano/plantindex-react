@@ -19,6 +19,7 @@
     border-bottom: 0.15rem solid $border-bright-color;
     padding-left: 3rem;
     font-size: $font-weight-default;
+    box-sizing: border-box;
     font-family: $font-input;
     &:focus {
       outline: none;

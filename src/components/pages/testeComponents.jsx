@@ -4,11 +4,12 @@ import Radio from '../base/radio';
 import Checkbox from '../base/checkbox';
 import Input from '../base/input';
 import CardSearch from '../base/cardSearch';
-import Select from '../base/select/'
+import Select from '../base/select/';
+import './testeComponents.scss';
 
 function TesteComponents() {
   return (
-    <div className="App">
+    <main className="main test">
       <h1 className="title">Testing Components</h1>
       <br/>
       <Button transparent={false} text="Lorem Ipsum" />
@@ -42,16 +43,16 @@ function TesteComponents() {
       >
       </Input>
       <br/>
-
-      <CardSearch>
-      </CardSearch>
-      <br/>
       <Select
         options= {['Test F01', 'Test F02', 'Test F03', 'Test F04']}
         onSelectedValue = {(e) => console.log(e)}
       >
       </Select>
-    </div>
+      <br/>
+
+      <CardSearch>
+      </CardSearch>
+    </main>
   );
 }
 

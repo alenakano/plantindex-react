@@ -12,7 +12,7 @@ function CardSearch({
     ornare. Integer pellentesque sit amet`
 }) {
   return (
-    <section class="list-cards">
+    <section className="list-cards">
       <div className="search-card">
         <div className="search-card__image-container">
           <img src={`${imgPath}`} alt={alt} className="search-card__image"></img>

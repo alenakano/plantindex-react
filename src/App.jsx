@@ -1,12 +1,15 @@
 import React from 'react';
+import Header from './components/base/header/header';
 import TesteComponents from './components/pages/testeComponents';
 
 import './style.scss';
 
 function App() {
   return (
-    <TesteComponents>
-    </TesteComponents>
+    <>
+      <Header />
+      <TesteComponents />
+    </>
   );
 }
 
