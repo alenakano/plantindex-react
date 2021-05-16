@@ -1,0 +1,60 @@
+@import '../../../variables';
+
+@mixin setup-bullet-icon($url: '../../../assets/icon.svg') {
+  position: absolute;
+  background: url($url) no-repeat;
+  background-size: contain;
+  left: 0.5rem;
+  top: -0.2rem;
+  height: 1.5rem;
+  width: 1.5rem;
+  filter: invert(28%) sepia(4%) saturate(2378%) hue-rotate(75deg) brightness(96%) contrast(94%);
+}
+
+@mixin background-opacity($color, $opacity: 0.3) {
+  background: $color;
+  background: rgba($color, $opacity);
+}
+
+.menu {
+  background-color: $alabaster;
+  z-index: 1;
+  &__block {
+    border-bottom: 1px solid $border-color;
+    margin: 0 auto;
+    width: 80%;
+    box-sizing: border-box;
+    height: 100%;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    padding: 0.5rem;
+  }
+  &__list {
+    display: flex;
+    flex-direction: row;
+  }
+  &__object {
+    position: relative;
+    padding: 0 2rem 0.5rem 2rem;
+    &--icon1 {
+      @include setup-bullet-icon('../../../assets/icon.svg');
+    }
+    &--icon2 {
+      @include setup-bullet-icon('../../../assets/icon2.svg');
+    }
+    &--icon3 {
+      @include setup-bullet-icon('../../../assets/icon3.svg');
+    }
+    &:nth-last-child(1) {
+      padding-right: 0;
+    }
+  }
+  &__text {
+    padding: 0 0 0.1rem 0.1rem;
+    &:hover {
+      border-bottom: 1px solid $border-bright-color;
+    }
+  }
+}
+
