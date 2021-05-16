@@ -1,6 +1,6 @@
 import React from 'react';
 import './board.scss'
-import './presentation.scss'
+import '../presentation.scss'
 
 function MainPage() {
   return (
