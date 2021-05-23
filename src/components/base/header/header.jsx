@@ -2,21 +2,13 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './header.scss';
 
-function Header({
-}) {
+function Header() {
   return (
     <header className="header menu">
       <nav className="menu__block">
-        <div 
-          onClick = {
-            (e) => {
-              e.preventDefault();
-            }
-          }>
-          <Link to='/'>
-            <p className="title--signature clickable">Plant<span className="title">Index</span></p>
-          </Link>
-        </div>
+        <Link to='/'>
+          <p className="title--signature clickable">Plant<span className="title">Index</span></p>
+        </Link>
         <ul className="menu__list">
           <li className="menu__object">
             <object aria-label="icone-folha" alt="icone-folha" type="image/svg+xml" className="menu__object--icon1"></object>
