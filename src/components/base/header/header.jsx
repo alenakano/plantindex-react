@@ -1,8 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './header.scss';
 
 function Header({
-  goToPage
 }) {
   return (
     <header className="header menu">
@@ -11,10 +11,11 @@ function Header({
           onClick = {
             (e) => {
               e.preventDefault();
-              goToPage('main');
             }
           }>
-          <p className="title--signature clickable">Plant<span className="title">Index</span></p>
+          <Link to='/'>
+            <p className="title--signature clickable">Plant<span className="title">Index</span></p>
+          </Link>
         </div>
         <ul className="menu__list">
           <li className="menu__object">
@@ -27,15 +28,9 @@ function Header({
           </li>
           <li className="menu__object">
             <object aria-label="icone-folha" alt="icone-folha"  type="image/svg+xml" className="menu__object--icon3"></object>
-            <p 
-              className="menu__text clickable" 
-              onClick={(e) => {
-                e.preventDefault();
-                goToPage('search');
-              }}
-            >
-              pesquise
-            </p>
+            <Link className="menu__text clickable"  to='/search'>
+                pesquise
+            </Link>
           </li>
         </ul>
       </nav>

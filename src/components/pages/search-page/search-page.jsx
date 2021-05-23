@@ -6,7 +6,6 @@ import CardResult from '../../base/cardResult'
 import '../presentation.scss'
 import './search-page.scss';
 
-
 function SearchPage() {
   return (
     <main className="main">
@@ -30,7 +29,7 @@ function SearchPage() {
           />
         </div>
         <div className="form-search__button">
-          <Button transparent={true} />
+          <Button transparent={true} text='Buscar' />
         </div>
       </form>
       <section className="search-results">
