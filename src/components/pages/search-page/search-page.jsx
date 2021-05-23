@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from '../../base/button';
 import Input from '../../base/input';
 import Select from '../../base/select';
 import CardResult from '../../base/cardResult'
 import '../presentation.scss'
 import './search-page.scss';
+import { search } from '../../../api/api';
 
 function SearchPage() {
+  const [results, setResults] = useState([]);
   return (
     <main className="main">
       <section className="presentation">
@@ -29,14 +31,19 @@ function SearchPage() {
           />
         </div>
         <div className="form-search__button">
-          <Button transparent={true} text='Buscar' />
+          <Button transparent={true} text='Buscar' onButtonClicked={searchPlant} />
         </div>
       </form>
       <section className="search-results">
-        <CardResult />
+        <CardResult cards={results} />
       </section>
     </main>
   );
-}
+  async function searchPlant() {
+    await search('/data', setResults);
+  }
+};
+
+
 
 export default SearchPage;
