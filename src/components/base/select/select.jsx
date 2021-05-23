@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import './select.scss';
-import { activateSelect, destroySelect } from './selectMoves';
+import { activateSelect } from './selectMoves';
 
 function Select({
   options = ['TESTE 01', 'TESTE 02', 'TESTE 03'],
@@ -9,7 +9,7 @@ function Select({
 }) {
   useEffect(() => { 
     activateSelect(); 
-    return () => destroySelect();
+    return () => activateSelect();
   })
   return (
     <>
