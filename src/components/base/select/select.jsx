@@ -1,13 +1,16 @@
 import React, { useEffect } from 'react';
 import './select.scss';
-import { activateSelect } from './selectMoves';
+import { activateSelect, destroySelect } from './selectMoves';
 
 function Select({
   options = ['TESTE 01', 'TESTE 02', 'TESTE 03'],
   onSelectedValue = () => false,
   placeholder = 'Selecione uma opção'
 }) {
-  useEffect(() => { activateSelect()})
+  useEffect(() => { 
+    activateSelect(); 
+    return () => destroySelect();
+  })
   return (
     <>
     <div className="custom-select">
