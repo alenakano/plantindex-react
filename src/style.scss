@@ -52,3 +52,9 @@ body {
     color: $title-deep-color;
   }
 }
+
+@media screen and (max-width: 992px) {
+  .app {
+    grid-template-rows: 200px auto auto;
+  }
+}

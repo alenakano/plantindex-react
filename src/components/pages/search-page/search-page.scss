@@ -23,3 +23,23 @@
   padding-top: 2rem;
   margin: 0 auto;
 }
+
+
+@media screen and (max-width: 992px) {
+  .form-search {
+    flex-wrap: wrap;
+    &__input {
+      width: 100%;
+      display: inline-block;
+    }
+    &__select {
+      width: 100%;
+      padding-top: 2rem;
+    }
+    &__button {
+      width: 50%;
+      margin: 0 auto;
+      padding-top: 2rem;
+    }
+  }
+}

@@ -1,7 +1,7 @@
 import React from 'react';
-import './cardSearch.scss';
+import './cardResult.scss';
 
-function CardSearch({
+function CardResult({
   cards = [
     {
       imgPath: 'http://localhost:5000/morango.jpg',
@@ -38,18 +38,18 @@ function CardSearch({
   return ( 
     <section className="list-cards"> 
       { cards.map((card, index) => {
-        return <div className="search-card" key={index}>
-          <div className="search-card__image-container">
+        return <div className="card-result" key={index}>
+          <div className="card-result__image-container">
             <img 
               src={`${card.imgPath}`} 
               alt={card.alt ? card.alt : card.title + ' imagem'} 
-              className="search-card__image">
+              className="card-result__image">
             </img>
           </div>
-          <h1 className="search-card__title title--signature">
+          <h1 className="card-result__title title--signature">
             {card.title}
           </h1>
-          <div className="search-card__text">
+          <div className="card-result__text">
             {formatText(card.desc)}
           </div>
         </div>
@@ -63,4 +63,4 @@ function CardSearch({
   }
 }
 
-export default CardSearch;
+export default CardResult;

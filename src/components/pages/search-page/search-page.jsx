@@ -2,7 +2,7 @@ import React from 'react';
 import Button from '../../base/button';
 import Input from '../../base/input';
 import Select from '../../base/select';
-import CardSearch from '../../base/cardSearch'
+import CardResult from '../../base/cardResult'
 import '../presentation.scss'
 import './search-page.scss';
 
@@ -34,7 +34,7 @@ function SearchPage() {
         </div>
       </form>
       <section className="search-results">
-        <CardSearch />
+        <CardResult />
       </section>
     </main>
   );
