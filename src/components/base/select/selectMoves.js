@@ -83,3 +83,9 @@ export function activateSelect() {
   then close all select boxes:*/
   document.addEventListener("click", closeAllSelect);
 }
+export function destroySelect() {
+  const selected = document.querySelector('#selected');
+  const selectOption = document.querySelector('#select-options');
+  if (selected) selected.remove();
+  if (selectOption) selectOption.remove();
+}

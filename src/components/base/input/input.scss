@@ -21,6 +21,10 @@
     font-size: $font-weight-default;
     box-sizing: border-box;
     font-family: $font-input;
+    font-size: $font-size-form;
+    &::placeholder {
+      font-size: $font-size-form;
+    }
     &:focus {
       outline: none;
       box-shadow: $shadow;

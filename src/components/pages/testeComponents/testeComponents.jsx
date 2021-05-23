@@ -1,10 +1,10 @@
 import React from 'react';
-import Button from '../base/button';
-import Radio from '../base/radio';
-import Checkbox from '../base/checkbox';
-import Input from '../base/input';
-import CardSearch from '../base/cardSearch';
-import Select from '../base/select/';
+import Button from '../../base/button';
+import Radio from '../../base/radio';
+import Checkbox from '../../base/checkbox';
+import Input from '../../base/input';
+import CardSearch from '../../base/cardSearch';
+import Select from '../../base/select/';
 import './testeComponents.scss';
 
 function TesteComponents() {
