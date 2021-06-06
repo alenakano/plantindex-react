@@ -41,12 +41,12 @@ function CardResult({
         return <div className="card-result" key={index}>
           <div className="card-result__image-container">
             <img 
-              src={`${card.imgPath}`} 
+              src={`http://localhost:5000/${card.title}.jpg`} 
               alt={card.alt ? card.alt : card.title + ' imagem'} 
               className="card-result__image">
             </img>
           </div>
-          <h1 className="card-result__title title--signature">
+          <h1 className="card-result__title">
             {card.title}
           </h1>
           <div className="card-result__text">
@@ -59,7 +59,7 @@ function CardResult({
   )
 
   function formatText(text) {
-    return text.substr(0, 295) + '...';
+    return text.substr(0, 180) + '...';
   }
 }
 

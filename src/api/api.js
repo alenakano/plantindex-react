@@ -1,14 +1,18 @@
 import axios from 'axios';
 
-const baseURL = process.env.REACT_APP_DOMAIN || 'http://google.com';
+const url = process.env.REACT_APP_DOMAIN || 'http://google.com';
 
 export const api = axios.create({
-	baseURL: baseURL
+	baseURL: url
 });
 
-export const search = async(param, setData) => {
-	const reqUrl = baseURL + param;
-	console.log('URI', reqUrl);
-	const response = await api.get(reqUrl);
-	setData(response.data);
+export const search = async(pathParam, queryParams, setData) => {
+  const finalUrl = new URL(url);
+  finalUrl.pathname = pathParam;
+  for (var [key, value] of Object.entries(queryParams)) {
+    if(value) finalUrl.searchParams.append(key, value);
+  }
+  const response = await api.get(finalUrl);
+  setData(response.data);
+  return response.data;
 }
