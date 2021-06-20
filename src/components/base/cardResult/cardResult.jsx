@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './cardResult.scss';
 
 function CardResult({
@@ -38,28 +39,28 @@ function CardResult({
   return ( 
     <section className="list-cards"> 
       { cards.map((card, index) => {
-        return <div className="card-result" key={index}>
+        return <Link className="card-result" key={index} to={`/plant/${card.id}`}>
           <div className="card-result__image-container">
             <img 
-              src={`${card.imgPath}`} 
+              src={`http://localhost:5000/${card.title}.jpg`} 
               alt={card.alt ? card.alt : card.title + ' imagem'} 
               className="card-result__image">
             </img>
           </div>
-          <h1 className="card-result__title title--signature">
+          <h1 className="card-result__title">
             {card.title}
           </h1>
           <div className="card-result__text">
             {formatText(card.desc)}
           </div>
-        </div>
+        </Link>
         })
       }
     </section>  
   )
 
   function formatText(text) {
-    return text.substr(0, 295) + '...';
+    return text.substr(0, 180) + '...';
   }
 }
 

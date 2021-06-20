@@ -1,6 +1,12 @@
 export function activateSelect() {
   var select, i, j, l, selectLength, selectElement, a, b, c;
   /*look for any elements with the class "custom-select":*/
+  if (document.querySelector('.custom-select__option--selected')) {
+    document.querySelector('.custom-select__option--selected').remove();
+  }
+  while(document.querySelector('.custom-select__option')) {
+    document.querySelector('.custom-select__option').remove();
+  }
   select = document.getElementsByClassName("custom-select");
   l = select.length;
   for (i = 0; i < l; i++) {
@@ -8,8 +14,6 @@ export function activateSelect() {
     selectLength = selectElement.length;
     /*for each element, create a new DIV that will act as the selected item:*/
     a = document.getElementById("selected");
-    // a.setAttribute("onChange", "() => console.log('oioioi')");
-    // a.setAttribute("class", "custom-select__selected");
     a.innerHTML = selectElement.options[selectElement.selectedIndex].innerHTML;
     select[i].appendChild(a);
     /*for each element, create a new DIV that will contain the option list:*/
@@ -82,10 +86,4 @@ export function activateSelect() {
   /*if the user clicks anywhere outside the select box,
   then close all select boxes:*/
   document.addEventListener("click", closeAllSelect);
-}
-export function destroySelect() {
-  const selected = document.querySelector('#selected');
-  const selectOption = document.querySelector('#select-options');
-  if (selected) selected.remove();
-  if (selectOption) selectOption.remove();
 }
