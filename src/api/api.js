@@ -13,5 +13,8 @@ export const search = async(pathParam, queryParams, setData) => {
     if(value) finalUrl.searchParams.append(key, value);
   }
   const response = await api.get(finalUrl);
+  if(!response.data) {
+    throw('Sem dados');
+  }
   setData(response.data);
 }
