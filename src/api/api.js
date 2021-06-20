@@ -14,5 +14,4 @@ export const search = async(pathParam, queryParams, setData) => {
   }
   const response = await api.get(finalUrl);
   setData(response.data);
-  return response.data;
 }

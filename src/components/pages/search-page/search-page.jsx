@@ -57,7 +57,6 @@ function SearchPage() {
   }
 
   async function searchPlant() {
-    console.log(selectedCat);
     const queryParams = {
       name: plantName,
       category: selectedCat.value

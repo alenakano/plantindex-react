@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './cardResult.scss';
 
 function CardResult({
@@ -38,7 +39,7 @@ function CardResult({
   return ( 
     <section className="list-cards"> 
       { cards.map((card, index) => {
-        return <div className="card-result" key={index}>
+        return <Link className="card-result" key={index} to={`/plant/${card.id}`}>
           <div className="card-result__image-container">
             <img 
               src={`http://localhost:5000/${card.title}.jpg`} 
@@ -52,7 +53,7 @@ function CardResult({
           <div className="card-result__text">
             {formatText(card.desc)}
           </div>
-        </div>
+        </Link>
         })
       }
     </section>  
