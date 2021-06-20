@@ -9,7 +9,7 @@ function PlantPage() {
   const [plant, setPlant] = useState({});
   useEffect(() => 
     search(`/plant/${id}`, '', setPlant).catch(() => history.push('/404'))
-    , [id]
+    , [id, history]
   );
   
   return (<main className="main">

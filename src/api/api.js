@@ -14,7 +14,7 @@ export const search = async(pathParam, queryParams, setData) => {
   }
   const response = await api.get(finalUrl);
   if(!response.data) {
-    throw('Sem dados');
+    throw(new Error("Sem dados"));
   }
   setData(response.data);
 }
