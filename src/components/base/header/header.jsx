@@ -12,7 +12,9 @@ function Header() {
         <ul className="menu__list">
           <li className="menu__object">
             <object aria-label="icone-folha" alt="icone-folha" type="image/svg+xml" className="menu__object--icon1"></object>
-            <p className="menu__text clickable">sobre</p>
+            <Link className="menu__text clickable" to="/sobre">
+              sobre
+            </Link>
           </li>
           <li className="menu__object clickable">
             <object aria-label="icone-folha" alt="icone-folha" type="image/svg+xml" className="menu__object--icon2"></object>

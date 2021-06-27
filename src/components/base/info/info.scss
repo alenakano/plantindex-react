@@ -1,0 +1,23 @@
+@import '../../../variables';
+
+.card-mp {
+  width: 80%;
+  padding: 20px 0 20px 0;
+  margin: 0 auto;
+  text-align: center;
+  &__text {
+    box-sizing: content-box;
+    background-color: $watusi;
+    padding: 20px;
+    border-radius: 15px;
+    line-height: normal;
+    text-align: justify;
+    &--highlight {
+      background-color: $shilo;
+    }
+    &--highlight:hover{
+      transition: 1s;
+      background-color: $envy;
+    }
+  }
+}

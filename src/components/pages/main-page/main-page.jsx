@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import Info from '../../base/info';
 import './board.scss'
 import '../presentation.scss'
 
@@ -12,19 +14,24 @@ function MainPage() {
           Descubra mais das plantas
         </div>
       </section>
+      <Info />
       <section className="board">
         <div className="board__title title">
-          Encontre plantas por categoria
+          Para aqueles que gostam de plantas
         </div>
         <div className="board__main clickable">
-          <div className="board__main--mask">
-            <p>teste01</p>
-          </div>
+          <Link to="/search">
+            <div className="board__main--mask">
+                <p>Procure por uma planta</p>
+            </div>
+          </Link>
         </div>
         <div className="board__aux1 clickable">
-          <div className="board__aux1--mask">
-            <p>teste02</p>
-          </div>
+          <Link to="/sobre">
+            <div className="board__aux1--mask">
+              <p>Sobre o site</p>
+            </div>
+          </Link>
         </div>
         <div className="board__aux2 clickable">
           <div className="board__aux2--mask">
