@@ -4,8 +4,6 @@ import Select from '../../base/select'
 
 import '../presentation.scss'
 import { search } from '../../../api/api';
-import { Subject } from 'rxjs';
-import { debounceTime } from 'rxjs/operators';
 import './categories-page.scss';
 
 export function CategoriesPage() {
