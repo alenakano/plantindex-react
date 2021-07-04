@@ -9,6 +9,7 @@ import SearchPage from './components/pages/search-page/search-page';
 import AboutPage from './components/pages/about-page/about-page';
 
 import './style.scss';
+import CategoriesPage from './components/pages/categories-page/categories-page';
 
 function App() {
   return (
@@ -23,6 +24,9 @@ function App() {
         </Route>
         <Route exact path='/search'>
           <SearchPage />
+        </Route>
+        <Route exact path='/categories'>
+          <CategoriesPage />
         </Route>
         <Route path='/plant/:id'>
           <PlantPage />
