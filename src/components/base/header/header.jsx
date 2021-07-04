@@ -18,7 +18,9 @@ function Header() {
           </li>
           <li className="menu__object clickable">
             <object aria-label="icone-folha" alt="icone-folha" type="image/svg+xml" className="menu__object--icon2"></object>
-            <p className="menu__text">cadastre</p>
+            <Link className="menu__text" to="/categories">
+              categorias
+            </Link>
           </li>
           <li className="menu__object">
             <object aria-label="icone-folha" alt="icone-folha"  type="image/svg+xml" className="menu__object--icon3"></object>

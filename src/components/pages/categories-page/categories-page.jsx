@@ -1,20 +1,17 @@
 import React, { useEffect, useState } from 'react';
-import Input from '../../base/input';
 import CardResult from '../../base/cardResult'
-import '../presentation.scss'
-import './search-page.scss';
-import { search } from '../../../api/api';
-import { Subject } from 'rxjs';
-import { debounceTime } from 'rxjs/operators';
+import Select from '../../base/select'
 
-function SearchPage() {
+import '../presentation.scss'
+import { search } from '../../../api/api';
+import './categories-page.scss';
+
+export function CategoriesPage() {
+  const [category, setCategory] = useState([]);
   const [results, setResults] = useState([]);
-  const subjectInput = new Subject();
-  
   useEffect(() => {
-    subscribeInput();
-    return () => subjectInput.unsubscribe();
-  });
+    getCategories();
+  }, []);
 
   return (
     <main className="main">
@@ -25,12 +22,12 @@ function SearchPage() {
           Busque uma planta
         </div>
       </section>
-      <form className="form-search" onSubmit={e => e.preventDefault()}>
-        <div className="form-search__input">
-          <Input 
-            placeholder = "Digite o nome da planta"
-            maxLength = {20}
-            subjectInput = {subjectInput}
+      <form className="form-search">
+        <div className="form-search__select">
+          <Select 
+            placeholder = {'Selecione uma categoria'}
+            options = {category}
+            onSelectedValue = {searchPlant}
           />
         </div>
       </form>
@@ -40,23 +37,19 @@ function SearchPage() {
     </main>
   );
 
-  function subscribeInput() {
-    subjectInput
-      .pipe(
-        debounceTime(850),
-      )
-      .subscribe((value) => searchPlant(value));
+  async function getCategories() {
+    const pathParam = '/categories';
+    const queryParams = '';
+    await search(pathParam, queryParams, setCategory);
   }
 
   async function searchPlant(value) {
     const queryParams = {
-      name: value,
+      category: value
     };
     const pathParam = '/searchplants'
     await search(pathParam, queryParams, setResults);
   }
-};
+}
 
-
-
-export default SearchPage;
+export default CategoriesPage;

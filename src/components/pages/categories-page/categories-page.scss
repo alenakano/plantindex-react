@@ -5,10 +5,10 @@
   padding-top: 2rem;
   margin: 0 auto;
   display: flex;
-  align-items: center;
-  &__input {
-    margin: 0 auto;
+  justify-content: space-between;
+  &__select {
     width: 70%;
+    margin: 0 auto;
   }
 }
 
@@ -17,7 +17,6 @@
   padding-top: 2rem;
   margin: 0 auto;
 }
-
 
 @media screen and (max-width: 992px) {
   .form-search {

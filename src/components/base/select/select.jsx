@@ -32,7 +32,7 @@ function Select({
           option: e.target.innerHTML,
           value: e.target.getAttribute('value')
         };
-        onSelectedValue(res)
+        onSelectedValue(res.value);
       }
       } 
       id="select-options" 

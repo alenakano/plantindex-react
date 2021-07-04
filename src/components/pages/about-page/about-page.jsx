@@ -6,7 +6,7 @@ import Info from '../../base/info';
 function AboutPage() {
   return (
     <main className="main">
-      <section class="presentation">
+      <section className="presentation">
         <div className="presentation__bg presentation__bg--sobre"></div>
         <object aria-label="vasos" alt="imagem-vasos" type="image/svg+xml" className="presentation__icon3"></object>
         <div className="presentation__text title--signature">
