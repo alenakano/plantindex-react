@@ -22,6 +22,10 @@
     &--search {
       background-image: url('../../assets/canteiro_corte.jpg');
     }
+    //Sobre -Page
+    &--sobre {
+      background-image: url('../../assets/sobre.jpg');
+    }
   }
   &__text {
 	  text-align: center;
@@ -34,5 +38,8 @@
   // Search Page
   &__icon2 {
     @include separator('assets/icon9.svg');
+  };
+  &__icon3 {
+    @include separator('assets/icon5.svg');
   };
 }

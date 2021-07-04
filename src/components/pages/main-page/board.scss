@@ -33,7 +33,7 @@
     "board-aux2"
     "board-aux3";
   grid-template-columns: 25% 25% 25% 25%;
-  grid-template-rows: 25% 25% 25% 25%;
+  grid-template-rows: 10% 28% 28% 29%;
   gap: 0.3rem;
   overflow: hidden;
   &__title {
@@ -41,7 +41,6 @@
     grid-column: 1 / 5;
     grid-row: 1 / 1;
     text-align: center;
-    margin: auto auto;
   }
   &__main {
     grid-area: board-main;

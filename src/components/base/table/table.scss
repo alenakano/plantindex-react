@@ -1,0 +1,26 @@
+@import '../../../variables';
+
+.table {
+  &__row {
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    // justify-content: space-between;
+    &--dark {
+      background-color: $shilo;
+    }
+    &--right {
+      background-color: $watusi;
+    }
+  }
+  &__title {
+    font-weight: bold;
+    width: 40%;
+  }
+  &__content {
+    &::first-letter{
+      text-transform: uppercase;
+    }
+    width: 60%;
+  }
+}

@@ -42,7 +42,7 @@ function CardResult({
         return <Link className="card-result" key={index} to={`/plant/${card.id}`}>
           <div className="card-result__image-container">
             <img 
-              src={`http://localhost:5000/${card.title}.jpg`} 
+              src={`http://localhost:5000/collection/${card.title}.jpg`} 
               alt={card.alt ? card.alt : card.title + ' imagem'} 
               className="card-result__image">
             </img>
