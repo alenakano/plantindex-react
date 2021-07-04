@@ -1,9 +1,9 @@
 import React from 'react';
-import './sobre.scss'
+import './about-page.scss'
 import '../presentation.scss'
 import Info from '../../base/info';
 
-function Sobre() {
+function AboutPage() {
   return (
     <main className="main">
       <section class="presentation">
@@ -34,4 +34,4 @@ function Sobre() {
   );
 }
 
-export default Sobre;
+export default AboutPage;

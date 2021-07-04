@@ -27,7 +27,7 @@ function MainPage() {
           </Link>
         </div>
         <div className="board__aux1 clickable">
-          <Link to="/sobre">
+          <Link to="/about">
             <div className="board__aux1--mask">
               <p>Sobre o site</p>
             </div>

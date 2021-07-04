@@ -6,7 +6,7 @@ import MainPage from './components/pages/main-page/main-page';
 import NotFound from './components/pages/not-found/not-found';
 import PlantPage from './components/pages/plant-page/plant-page';
 import SearchPage from './components/pages/search-page/search-page';
-import Sobre from './components/pages/sobre/sobre';
+import AboutPage from './components/pages/about-page/about-page';
 
 import './style.scss';
 
@@ -18,8 +18,8 @@ function App() {
         <Route exact path='/'>
           <MainPage/>
         </Route>
-        <Route exact path='/sobre'>
-          <Sobre />
+        <Route exact path='/about'>
+          <AboutPage />
         </Route>
         <Route exact path='/search'>
           <SearchPage />
