@@ -52,7 +52,7 @@ function CardResult({
     }
     if (cards.length === 0 && cards.error) {
       return <section className="message">
-        <p className="message__text">Falha na requisição. Por favor, tente mais tarde</p>
+        <p className="message__text">Falha na pesquise. Por favor, tente mais tarde</p>
       </section>
     }
     return <section className="list-cards"> 

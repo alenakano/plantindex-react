@@ -7,7 +7,7 @@ function NotFound() {
       <div className='boardNF'>
         <div className='boardNF--mask'>
           <div className='boardNF__text'>
-            <h1 className='boardNF__text--title'>Ops!</h1>
+            <h1 className='boardNF__text--title'>):</h1>
             <p className='boardNF__text--subtitle'>A página que você procura não foi encontrada.</p>
           </div>
         </div>
