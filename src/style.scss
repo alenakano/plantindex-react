@@ -29,12 +29,13 @@ body {
 
 .main {
   grid-area: main;
-  min-height: 90vh;
+  min-height: calc(90vh - 70px - 20px);
   font-size: $font-weight-default;
 }
 
 .footer {
   grid-area: footer;
+  margin-top: 20px;
 }
 
 .clickable {
