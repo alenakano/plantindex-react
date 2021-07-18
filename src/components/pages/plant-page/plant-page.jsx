@@ -8,8 +8,10 @@ function PlantPage() {
   let history = useHistory();
   const { id }  = useParams();
   const [plant, setPlant] = useState({});
-  useEffect(() => 
+  useEffect(() => {
+    window.scrollTo(0, 0);
     search(`/plant/${id}`, '', setPlant).catch(() => history.push('/404'))
+  }
     , [id, history]
   );
   

@@ -10,6 +10,7 @@ export function CategoriesPage() {
   const [category, setCategory] = useState([]);
   const [results, setResults] = useState([]);
   useEffect(() => {
+    window.scrollTo(0, 0);
     getCategories();
   }, []);
 

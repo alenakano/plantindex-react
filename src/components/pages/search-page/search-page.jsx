@@ -5,13 +5,14 @@ import '../presentation.scss'
 import './search-page.scss';
 import { search } from '../../../api/api';
 import { Subject } from 'rxjs';
-import { debounceTime, filter, map } from 'rxjs/operators';
+import { debounceTime, map } from 'rxjs/operators';
 
 function SearchPage() {
   const [results, setResults] = useState([]);
   const subjectInput = new Subject();
   
   useEffect(() => {
+    window.scrollTo(0, 0);
     subscribeInput();
     return () => subjectInput.unsubscribe();
   });
@@ -47,7 +48,6 @@ function SearchPage() {
         map(value => {
           if(!value) {
             setResults([]);
-            console.log('ENTROU VAZIO')
             return;
           }
           return value;

@@ -1,10 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import Info from '../../base/info';
 import './board.scss'
 import '../presentation.scss'
 
 function MainPage() {
+  useEffect(()=> {
+    window.scrollTo(0, 0);
+  });
+
   return (
     <main className="main">
       <section className="presentation">
@@ -34,14 +38,18 @@ function MainPage() {
           </Link>
         </div>
         <div className="board__aux2 clickable">
-          <div className="board__aux2--mask">
-            <p>teste03</p>
-          </div>
+          <Link to="/categories">
+            <div className="board__aux2--mask">
+              <p>Plantas por categoria</p>
+            </div>
+          </Link>
         </div>
         <div className="board__aux3 clickable">
-          <div className="board__aux3--mask">
-            <p>teste04</p>
-          </div>
+          <Link to="/about#sobre">
+            <div className="board__aux3--mask">
+              <p>Contato</p>
+            </div>
+          </Link>
         </div>
       </section>
       <section className="explanation">

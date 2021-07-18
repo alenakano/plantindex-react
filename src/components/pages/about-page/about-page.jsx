@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './about-page.scss'
 import '../presentation.scss'
 import Info from '../../base/info';
 
 function AboutPage() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  });
   return (
     <main className="main">
       <section className="presentation">
