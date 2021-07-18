@@ -36,8 +36,26 @@ function CardResult({
     }
   ]
 }) {
-  return ( 
-    <section className="list-cards"> 
+  return (
+    isResult(cards)
+  )
+
+  function formatText(text) {
+    return text.substr(0, 180) + '...';
+  }
+
+  function isResult(cards) {
+    if (cards.length === 0 && cards.success) {
+      return <section className="message">
+        <p className="message__text">Não encontramos nenhum resultado</p>
+      </section>
+    }
+    if (cards.length === 0 && cards.error) {
+      return <section className="message">
+        <p className="message__text">Falha na requisição. Por favor, tente mais tarde</p>
+      </section>
+    }
+    return <section className="list-cards"> 
       { cards.map((card, index) => {
         return <Link className="card-result" key={index} to={`/plant/${card.id}`}>
           <div className="card-result__image-container">
@@ -57,10 +75,6 @@ function CardResult({
         })
       }
     </section>  
-  )
-
-  function formatText(text) {
-    return text.substr(0, 180) + '...';
   }
 }
 

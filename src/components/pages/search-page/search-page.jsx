@@ -5,7 +5,7 @@ import '../presentation.scss'
 import './search-page.scss';
 import { search } from '../../../api/api';
 import { Subject } from 'rxjs';
-import { debounceTime } from 'rxjs/operators';
+import { debounceTime, filter, map } from 'rxjs/operators';
 
 function SearchPage() {
   const [results, setResults] = useState([]);
@@ -44,11 +44,20 @@ function SearchPage() {
     subjectInput
       .pipe(
         debounceTime(850),
+        map(value => {
+          if(!value) {
+            setResults([]);
+            console.log('ENTROU VAZIO')
+            return;
+          }
+          return value;
+        }),
       )
-      .subscribe((value) => searchPlant(value));
+      .subscribe((value) => value ? searchPlant(value) : null);
   }
 
   async function searchPlant(value) {
+    console.log('VALUE', value)
     const queryParams = {
       name: value,
     };
