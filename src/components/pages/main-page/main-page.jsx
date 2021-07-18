@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { HashLink } from 'react-router-hash-link';
 import { Link } from 'react-router-dom';
 import Info from '../../base/info';
 import './board.scss'
@@ -45,11 +46,11 @@ function MainPage() {
           </Link>
         </div>
         <div className="board__aux3 clickable">
-          <Link to="/about#sobre">
+          <HashLink to="/about#contact">
             <div className="board__aux3--mask">
               <p>Contato</p>
             </div>
-          </Link>
+          </HashLink>
         </div>
       </section>
       <section className="explanation">

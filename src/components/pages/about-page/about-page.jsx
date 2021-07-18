@@ -5,7 +5,9 @@ import Info from '../../base/info';
 
 function AboutPage() {
   useEffect(() => {
-    window.scrollTo(0, 0);
+    if(!window.location.hash){
+      window.scrollTo(0, 0);
+    }
   });
   return (
     <main className="main">
@@ -32,6 +34,9 @@ function AboutPage() {
           </div>
         </div>
       </section>
+      <div className="card-contact" id= "contact">
+        <h1>TESTE CONTATO</h1>
+      </div>
 
     </main>
   );
