@@ -31,18 +31,24 @@ function AboutPage() {
           <div className="card-dev__container">
             <div className="card-dev__photo" />
             <div className="card-dev__text">
-                Olá! Muito obrigado pela sua visita!<br/>
+                <span className="card-dev__text--center">
+                  Olá! Muito obrigado pela sua visita!<br/>
+                </span>
                 Meu nome é Alexandre Nakano Marques e sou um desenvolvedor com 
                 experiência em diversas tecnologias. Comecei como desenvolvedor 
-                front-end Angular, minha especialidade, e fui adquirindo experiência
-                em outras tecnologias, como NodeJS, Java (Spring, Struts, JAX-RS) e
-                ReactJS. Todas elas utilizando bibliotecas e soluções comumente
+                front-end <span className="card-dev__text--highlight">Angular</span>, 
+                minha especialidade, e fui adquirindo experiência em outras 
+                tecnologias, como <span className="card-dev__text--highlight">
+                NodeJS</span>, <span className="card-dev__text--highlight">Java</span> 
+                (Spring, Struts, JAX-RS) e <span className="card-dev__text--highlight">
+                ReactJS</span>. Todas elas utilizando bibliotecas e soluções comumente
                 utilizadas no mercado.<br />
                 Tudo isso pensando em arquitetura para cloud baseado em microsserviços,
                 utilizando esteira de automação DevOps, controle de versão com GIT 
                 (GitFlow), testes unitários e controle de qualidade. <br />
                 São muitas experiências acumuladas ao longo de minha trajetória e
-                posso contar mais 
+                posso contar mais! (:
+                Utilize alguns dos meios do rodapé.
               <p>
               </p>
             </div>

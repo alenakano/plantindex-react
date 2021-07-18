@@ -38,6 +38,13 @@
     line-height: 2em;
     text-align: justify;
     box-sizing: border-box;
+    &--center {
+      display: block;
+      text-align: center;
+    }
+    &--highlight {
+      background-color: $shilo;
+    }
   }
 }
 
