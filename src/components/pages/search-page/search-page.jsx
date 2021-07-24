@@ -5,13 +5,14 @@ import '../presentation.scss'
 import './search-page.scss';
 import { search } from '../../../api/api';
 import { Subject } from 'rxjs';
-import { debounceTime } from 'rxjs/operators';
+import { debounceTime, map } from 'rxjs/operators';
 
 function SearchPage() {
   const [results, setResults] = useState([]);
   const subjectInput = new Subject();
   
   useEffect(() => {
+    window.scrollTo(0, 0);
     subscribeInput();
     return () => subjectInput.unsubscribe();
   });
@@ -44,11 +45,19 @@ function SearchPage() {
     subjectInput
       .pipe(
         debounceTime(850),
+        map(value => {
+          if(!value) {
+            setResults([]);
+            return;
+          }
+          return value;
+        }),
       )
-      .subscribe((value) => searchPlant(value));
+      .subscribe((value) => value ? searchPlant(value) : null);
   }
 
   async function searchPlant(value) {
+    console.log('VALUE', value)
     const queryParams = {
       name: value,
     };

@@ -8,8 +8,10 @@ function PlantPage() {
   let history = useHistory();
   const { id }  = useParams();
   const [plant, setPlant] = useState({});
-  useEffect(() => 
+  useEffect(() => {
+    window.scrollTo(0, 0);
     search(`/plant/${id}`, '', setPlant).catch(() => history.push('/404'))
+  }
     , [id, history]
   );
   
@@ -22,7 +24,7 @@ function PlantPage() {
     </div>
     <section className="plant-board">
       <div className="plant-board__imgContainer">
-          <img className="plant-board__img" src={'http://localhost:5000/collection/' + plant.nome + '.jpg'} alt={plant.name}></img>
+          <img className="plant-board__img" src={'/collection/' + plant.nome + '.jpg'} alt={plant.name}></img>
       </div>
       <div className="plant-board__table" >
         <Table dados={ plant }></Table>

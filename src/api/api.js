@@ -7,14 +7,20 @@ export const api = axios.create({
 });
 
 export const search = async(pathParam, queryParams, setData) => {
+  let response;
   const finalUrl = new URL(url);
   finalUrl.pathname = pathParam;
   for (var [key, value] of Object.entries(queryParams)) {
     if(value) finalUrl.searchParams.append(key, value);
   }
-  const response = await api.get(finalUrl);
-  if(!response.data) {
-    throw(new Error("Sem dados"));
+
+  response = await api.get(finalUrl).catch(e => {
+    console.error('ERRO DE COMUNICAÇÃO => ', e);
+  });
+  
+  if(!response || !response.data || response.status < 200 || response.status >= 300) {
+    setData(Object.assign([], { error: true }));
+    return;
   }
-  setData(response.data);
+  setData(Object.assign(response.data, { success: true }));
 }

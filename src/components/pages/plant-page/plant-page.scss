@@ -1,7 +1,7 @@
 @import '../../../variables';
 
 .plant-title {
-  padding: 20px;
+  padding-top: 20px;
   width: 80%;
   margin: 0 auto;
   &__text {
@@ -39,5 +39,20 @@
     font-size: $font-subtitle;
     font-weight: $font-light;
     color: $title-deep-color;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .plant-board {
+    flex-direction: column;
+    width: 100%;
+    &__table {
+      width: 80%;
+      margin: 0 auto;
+    }
+    &__imgContainer {
+      width: 100%;
+      padding: 20px 0px;
+    }
   }
 }
