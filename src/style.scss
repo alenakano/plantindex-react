@@ -29,11 +29,13 @@ body {
 
 .main {
   grid-area: main;
+  min-height: calc(90vh - 70px - 20px);
   font-size: $font-weight-default;
 }
 
 .footer {
   grid-area: footer;
+  margin-top: 20px;
 }
 
 .clickable {
@@ -50,5 +52,24 @@ body {
     font-size: $font-title;
     font-weight: $font-light;
     color: $title-deep-color;
+  }
+}
+
+.separator {
+  padding-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  &__icon {
+    @include separator('assets/icon6.svg');
+  };
+}
+
+@media screen and (max-width: 992px) {
+  .app {
+    grid-template-rows: 200px auto auto;
   }
 }

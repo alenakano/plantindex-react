@@ -5,6 +5,7 @@ function Input({
   placeholder = 'Texto aqui',
   name = 'nameInput',
   onValueInput = () => false,
+  subjectInput = { next: () => null },
   maxLength ='40' 
 }) {
   return (
@@ -17,9 +18,10 @@ function Input({
         name={name} type="text" 
         placeholder={placeholder}
         maxLength = {maxLength}
-        onKeyUp={(e) => {
+        onInput={(e) => {
             e.preventDefault();
             onValueInput(e.target.value);
+            subjectInput.next(e.target.value);
           }
         }
       />

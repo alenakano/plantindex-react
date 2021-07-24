@@ -1,0 +1,27 @@
+@import '../../../variables';
+
+.table {
+  &__row {
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    &--dark {
+      background-color: $shilo;
+    }
+    &--bright {
+      background-color: $watusi;
+    }
+  }
+  &__title {
+    font-weight: bold;
+    width: 40%;
+    padding-right: 20px;
+  }
+  &__content {
+    &::first-letter{
+      text-transform: uppercase;
+    }
+    width: 60%;
+  }
+}

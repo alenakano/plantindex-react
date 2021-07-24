@@ -1,0 +1,45 @@
+@import '../../variables';
+
+.presentation {
+  height: 260px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  // Default - Main Page
+  &__bg {
+    background: url('../../assets/vaso_corte.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: .15;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    //Search -Page
+    &--search {
+      background-image: url('../../assets/canteiro_corte.jpg');
+    }
+    //Sobre -Page
+    &--sobre {
+      background-image: url('../../assets/sobre.jpg');
+    }
+  }
+  &__text {
+	  text-align: center;
+    margin: 0 auto;
+  }
+  // Main Page
+  &__icon {
+    @include separator('assets/icon4.svg');
+  };
+  // Search Page
+  &__icon2 {
+    @include separator('assets/icon9.svg');
+  };
+  &__icon3 {
+    @include separator('assets/icon5.svg');
+  };
+}

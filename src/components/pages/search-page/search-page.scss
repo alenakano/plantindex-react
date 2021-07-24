@@ -1,0 +1,52 @@
+@import '../../../variables';
+
+.form-search {
+  width: 80%;
+  padding-top: 2rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  &__input {
+    margin: 0 auto;
+    width: 70%;
+  }
+}
+
+.search-results {
+  width: 80%;
+  padding-top: 2rem;
+  margin: 0 auto;
+}
+
+.message {
+  width: 100%;
+  padding: 10px 0 20px 0;
+  margin: 0 auto;
+  &__text {
+    text-align: center;
+    box-sizing: content-box;
+    background-color: $watusi;
+    padding: 20px;
+    border-radius: 15px;
+    line-height: normal;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .form-search {
+    flex-wrap: wrap;
+    &__input {
+      width: 100%;
+      display: inline-block;
+    }
+    &__select {
+      width: 100%;
+      padding-top: 2rem;
+    }
+    &__button {
+      width: 50%;
+      margin: 0 auto;
+      padding-top: 2rem;
+    }
+  }
+}

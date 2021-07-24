@@ -1,0 +1,33 @@
+@import '../../../variables';
+
+.boardNF {
+  width: 100%; 
+  height: 100%;
+  position: relative;
+  &--mask {
+    position: absolute;
+    background-color: $mask;
+    height: 100%;
+    width: 100%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__text {
+    margin: auto auto;
+    &--title {
+      font-family: $font-source-sans;
+      font-size: $font-title;
+      font-weight: $font-light;
+      text-align: center;
+    }
+    &--subtitle {
+      padding-top: 5%;
+      font-family: $font-source-sans;
+      font-size: $font-subtitle;
+      font-weight: $font-regular;
+      text-align: center;
+    }
+  }
+}

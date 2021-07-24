@@ -15,7 +15,7 @@
   background-color: $background-menu-color;
   border-bottom: 0.15rem solid $border-color;
   box-sizing: border-box;
-  padding: 0.6rem 0 0 1rem;
+  padding: 0.75rem 0 0 1rem;
   &__select {
     display: none;
   }
@@ -42,6 +42,7 @@
   }
   &__option {
     padding: 0.5rem 0 0.5rem 1rem;
+    font-size: $font-size-form;
     &:hover {
       background-color: $select-option-color;
     }
@@ -50,9 +51,11 @@
       background-color: $select-option-color;
       animation-name: slide;
       animation-duration: 0.5s;
+      font-size: $font-size-form;
     }
   }
   &__selected {
+    font-size: $font-size-form;
     &:after {
       position: absolute;
       content: "";
