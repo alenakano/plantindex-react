@@ -11,7 +11,7 @@ function NotFound() {
             <p className='boardNF__text--subtitle'>A página que você procura não foi encontrada.</p>
           </div>
         </div>
-        <img alt="not found" className='boardNF__image' src='http://localhost:5000/not-found2.jpg' />
+        <img alt="not found" className='boardNF__image' src='/not-found2.jpg' />
       </div>
     </main>
   )
