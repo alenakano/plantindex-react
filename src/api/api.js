@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const url = process.env.REACT_APP_DOMAIN || 'http://google.com';
+const url = process.env.REACT_APP_BASE_URL || 'https://apiplant.herokuapp.com';
 
 export const api = axios.create({
 	baseURL: url
