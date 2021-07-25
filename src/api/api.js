@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const url = process.env.REACT_APP_DOMAIN || 'http://google.com';
+const url = process.env.REACT_APP_BASE_URL || 'http://localhost:8080';
 
 export const api = axios.create({
 	baseURL: url
