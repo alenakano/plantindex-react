@@ -32,6 +32,7 @@ function SearchPage() {
             placeholder = "Digite o nome da planta"
             maxLength = {20}
             subjectInput = {subjectInput}
+            showIcon="true"
           />
         </div>
       </form>

@@ -6,14 +6,15 @@ function Input({
   name = 'nameInput',
   onValueInput = () => false,
   subjectInput = { next: () => null },
+  showIcon = false,
   maxLength ='40' 
 }) {
   return (
     <div className="input-search">
-      <object aria-label="icon" type="image/svg+xml" className="input-search__icon"></object>
-      <span className="input-search__icon"></span>
+      { showIcon && <object aria-label="icon" type="image/svg+xml" className="input-search__icon"></object> }
+      { showIcon && <span className="input-search__icon"></span> }
       <input 
-        className="input-search__field"
+        className={showFindIcon(showIcon)}
         aria-label={placeholder}
         name={name} type="text" 
         placeholder={placeholder}
@@ -27,6 +28,10 @@ function Input({
       />
     </div>
   );
+}
+
+function showFindIcon(showIcon) {
+  return showIcon ? 'input-search__field-icon' : 'input-search__field';
 }
 
 export default Input;
