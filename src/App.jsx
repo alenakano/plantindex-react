@@ -1,15 +1,16 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import AboutPage from './components/pages/about-page/about-page';
+import CategoriesPage from './components/pages/categories-page/categories-page';
 import Footer from './components/base/footer/footer';
 import Header from './components/base/header/header';
+import LoginPage from './components/pages/login-page/login-page';
 import MainPage from './components/pages/main-page/main-page';
 import NotFound from './components/pages/not-found/not-found';
 import PlantPage from './components/pages/plant-page/plant-page';
 import SearchPage from './components/pages/search-page/search-page';
-import AboutPage from './components/pages/about-page/about-page';
 
 import './style.scss';
-import CategoriesPage from './components/pages/categories-page/categories-page';
 
 function App() {
   return (
@@ -30,6 +31,9 @@ function App() {
         </Route>
         <Route path='/plant/:id'>
           <PlantPage />
+        </Route>
+        <Route exact path='/login'>
+          <LoginPage />
         </Route>
         <Route>
           <NotFound />

@@ -28,6 +28,12 @@ function Header() {
                 pesquise
             </Link>
           </li>
+          <li className="menu__object">
+            <object aria-label="icone-folha" alt="icone-folha"  type="image/svg+xml" className="menu__object--icon4"></object>
+            <Link className="menu__text clickable"  to='/login'>
+                login
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>

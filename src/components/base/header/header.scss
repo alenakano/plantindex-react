@@ -35,7 +35,6 @@
     margin: 0 auto;
     width: 80%;
     box-sizing: border-box;
-    height: 100%;
     display: flex;
     align-items: baseline;
     justify-content: space-between;
@@ -56,6 +55,9 @@
     }
     &--icon3 {
       @include setup-bullet-icon('../../../assets/icon3.svg');
+    }
+    &--icon4 {
+      @include setup-bullet-icon('../../../assets/icon4.svg');
     }
     &:nth-last-child(1) {
       padding-right: 0;
@@ -80,7 +82,7 @@
       align-items: center;
     }
     &__object {
-      padding: 1.5rem 0 0rem 0;
+      padding: 1.5rem 0 0rem;
       &--icon1 {
         @include setup-bullet-icon-mobile('../../../assets/icon.svg');
       }
@@ -89,6 +91,9 @@
       }
       &--icon3 {
         @include setup-bullet-icon-mobile('../../../assets/icon3.svg');
+      }
+      &--icon4 {
+        @include setup-bullet-icon-mobile('../../../assets/icon4.svg');
       }
     }
   }
