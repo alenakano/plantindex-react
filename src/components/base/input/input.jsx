@@ -17,21 +17,26 @@ function Input({
         className={showFindIcon(showIcon)}
         aria-label={placeholder}
         name={name} type="text" 
-        placeholder={placeholder}
         maxLength = {maxLength}
         onInput={(e) => {
-            e.preventDefault();
-            onValueInput(e.target.value);
-            subjectInput.next(e.target.value);
-          }
+          e.preventDefault();
+          onValueInput(e.target.value);
+          subjectInput.next(e.target.value);
         }
+      }
+        required
       />
+      <span className={placeHolderPosition(showIcon)}>{placeholder}</span>
     </div>
   );
 }
 
 function showFindIcon(showIcon) {
   return showIcon ? 'input-search__field-icon' : 'input-search__field';
+}
+
+function placeHolderPosition(showIcon) {
+  return showIcon ? 'input-search__floating-label-icon' : 'input-search__floating-label';
 }
 
 export default Input;

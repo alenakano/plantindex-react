@@ -2,7 +2,7 @@
 
 @mixin input-settings() {
 	width: 100%;
-  height: 2.5rem;
+  height: 2rem;
   border: none;
   background-color: transparent;
   border-bottom: 0.15rem solid $border-bright-color;
@@ -19,10 +19,19 @@
     transition: 0.5s;
     border-bottom: 0.15rem solid $border-focus-color;
   }
+  &:focus ~ .input-search__floating-label,
+  &:valid ~ .input-search__floating-label,
+  &:focus ~ .input-search__floating-label-icon,
+  &:valid ~ .input-search__floating-label-icon {
+    bottom: 3.5rem;
+    font-size: 11px;
+    opacity: 1;
+  }
 }
 
 .input-search {
   position: relative;
+  padding: 1rem 0 1rem 0;
   &__icon {
     position: absolute;
     background: url('../../../assets/search.svg') no-repeat;
@@ -38,5 +47,17 @@
   &__field-icon {
     @include input-settings();
     padding-left: 3rem;
+  }
+  &__floating-label {
+    pointer-events: none;
+    transition: 0.2s ease all;
+    position: absolute;
+    left: 0.1rem;
+  }
+  &__floating-label-icon {
+    pointer-events: none;
+    transition: 0.2s ease all;
+    position: absolute;
+    left: 3rem;
   }
 }

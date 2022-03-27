@@ -1,0 +1,13 @@
+@import '../../../variables';
+
+.login-form {
+  width: 80%;
+  margin: 0 auto;
+  padding: 5rem 0 0 5rem;
+  display: flex;
+  align-items: center;
+  &__input {
+    margin: 0 auto;
+    width: 50%;
+  }
+}
